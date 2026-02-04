@@ -28,20 +28,14 @@ jobs:
           mkdir -p build
           
           # Recolectar todos los archivos CSS que puedan ser temas
-          # Excluimos build y node_modules
           CSS_FILES=$(find . -name "*.css" -not -path "./build/*")
           THEME_ARGS=""
           for css in $CSS_FILES; do
             THEME_ARGS="$THEME_ARGS --theme-set $css"
           done
           
-          echo "Temas encontrados: $CSS_FILES"
-          
           # Encontrar todos los archivos Markdown con marp: true
           FILES=$(grep -l "marp: true" $(find . -name "*.md" -not -path "./build/*"))
-          
-          echo "Archivos a convertir:"
-          echo "$FILES"
           
           for f in $FILES; do
             echo "Procesando $f..."
@@ -50,14 +44,12 @@ jobs:
             BASE_NAME=$(basename "$REL_PATH" .md)
             
             mkdir -p "build/$DIR_NAME"
-            
-            # Convertir con Marp CLI usando todos los temas registrados
             npx @marp-team/marp-cli "$f" $THEME_ARGS --html -o "build/$DIR_NAME/$BASE_NAME.html"
           done
           
-          # Generar el índice
+          # Generar el índice Markdown
           echo "Generando contenido del índice..."
-          cp README.md build/index_content.md
+          cat README.md > build/index_content.md
           echo -e "\n## Índice de Presentaciones\n" >> build/index_content.md
           
           if [ -n "$FILES" ]; then
@@ -69,24 +61,18 @@ jobs:
               HTML_PATH="$DIR_NAME/$BASE_NAME.html"
               HTML_PATH="${HTML_PATH#./}"
               
-              # Extraer título (primer H1)
               TITLE=$(grep "^# " "$f" | head -n 1 | sed 's/# //')
               if [ -z "$TITLE" ]; then TITLE="$BASE_NAME"; fi
               
               echo "$DIR_NAME|$TITLE|$HTML_PATH" >> links.tmp
             done
             
-            # Organizar links por directorio
             LAST_DIR=""
             sort links.tmp | while IFS='|' read -r dir title path; do
               if [ "$LAST_DIR" != "$dir" ]; then
-                # Añadir un salto de diapositiva para cada nuevo directorio si no es el primero
-                if [ -n "$LAST_DIR" ]; then
-                   echo -e "\n---\n" >> build/index_content.md
-                fi
                 DISPLAY_DIR=$dir
                 if [ "$dir" == "." ]; then DISPLAY_DIR="Raíz"; fi
-                echo -e "### $DISPLAY_DIR\n" >> build/index_content.md
+                echo -e "\n### $DISPLAY_DIR\n" >> build/index_content.md
                 LAST_DIR="$dir"
               fi
               echo "* [$title]($path)" >> build/index_content.md
@@ -94,21 +80,12 @@ jobs:
             rm -f links.tmp
           fi
           
-          # Convertir index_content.md a index.html
-          # Forzamos tema UNRN para el índice
-          {
-            echo "---"
-            echo "marp: true"
-            echo "theme: UNRN"
-            echo "paginate: true"
-            echo "---"
-            cat build/index_content.md
-          } > build/index.md
+          # Convertir index_content.md a index.html (HTML simple, no Marp)
+          # Usamos pandoc para convertir MD a HTML con el CSS personalizado
+          pandoc build/index_content.md -s -c index_style.css -o build/index.html --metadata title="Presentaciones UNRN"
           
-          npx @marp-team/marp-cli build/index.md $THEME_ARGS --html -o build/index.html
-          
-          # Copiar assets estáticos (CSS y otros si los hubiera)
-          # Esto asegura que si alguien descarga el HTML y el CSS, funcione localmente
+          # Copiar assets estáticos al build
+          cp index_style.css build/
           for css in $CSS_FILES; do
             REL_CSS="${css#./}"
             mkdir -p "build/$(dirname "$REL_CSS")"
