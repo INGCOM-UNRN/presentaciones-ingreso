@@ -1,0 +1,1147 @@
+<!DOCTYPE html><html lang="C"><head><title>&lt;!-- fit --&gt; Aprender con inteligencia artificial</title><meta property="og:title" content="&lt;!-- fit --&gt; Aprender con inteligencia artificial"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:960px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section .hljs{background:#000;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-comment,div#\:\$p > svg > foreignObject > section .hljs-quote{color:#aeaeae;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-keyword,div#\:\$p > svg > foreignObject > section .hljs-selector-tag,div#\:\$p > svg > foreignObject > section .hljs-type{color:#e28964}div#\:\$p > svg > foreignObject > section .hljs-string{color:#65b042}div#\:\$p > svg > foreignObject > section .hljs-subst{color:#daefa3}div#\:\$p > svg > foreignObject > section .hljs-link,div#\:\$p > svg > foreignObject > section .hljs-regexp{color:#e9c062}div#\:\$p > svg > foreignObject > section .hljs-name,div#\:\$p > svg > foreignObject > section .hljs-section,div#\:\$p > svg > foreignObject > section .hljs-tag,div#\:\$p > svg > foreignObject > section .hljs-title{color:#89bdff}div#\:\$p > svg > foreignObject > section .hljs-class .hljs-title,div#\:\$p > svg > foreignObject > section .hljs-doctag,div#\:\$p > svg > foreignObject > section .hljs-title.class_{text-decoration:underline}div#\:\$p > svg > foreignObject > section .hljs-bullet,div#\:\$p > svg > foreignObject > section .hljs-number,div#\:\$p > svg > foreignObject > section .hljs-symbol{color:#3387cc}div#\:\$p > svg > foreignObject > section .hljs-params,div#\:\$p > svg > foreignObject > section .hljs-template-variable,div#\:\$p > svg > foreignObject > section .hljs-variable{color:#3e87e3}div#\:\$p > svg > foreignObject > section .hljs-attribute{color:#cda869}div#\:\$p > svg > foreignObject > section .hljs-meta{color:#8996a8}div#\:\$p > svg > foreignObject > section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-selector-class{color:#9b703f}div#\:\$p > svg > foreignObject > section .hljs-selector-id{color:#8b98ab}div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:.5em 0 0}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.8em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.9em}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:1em 0 0}div#\:\$p > svg > foreignObject > section ol>li,div#\:\$p > svg > foreignObject > section ul>li{margin:.3em 0 0}div#\:\$p > svg > foreignObject > section ol>li>p,div#\:\$p > svg > foreignObject > section ul>li>p{margin:.6em 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#\:\$p > svg > foreignObject > section blockquote:before{left:0;top:0}div#\:\$p > svg > foreignObject > section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:66%}div#\:\$p > svg > foreignObject > section header{top:0}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{left:0;right:0}div#\:\$p > svg > foreignObject > section footer{bottom:0}div#\:\$p > svg > foreignObject > section{--color-background:light-dark(#fff8e1, #455a64);--color-background-stripe:light-dark(
+    rgba(69,90,100,.1),
+    rgba(255,248,225,.1)
+  );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
+    #6a7a7d,
+    #dad8c8
+  );--color-highlight:light-dark(#0288d1, #81d4fa);background-color:var(--color-background);background-image:linear-gradient(135deg, hsla(0,0%,53%,0), hsla(0,0%,53%,.02) 50%, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,.05));color:var(--color-foreground);color-scheme:light;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;overflow-wrap:break-word;padding:70px;width:1280px}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{bottom:0;font-size:80%;right:0}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){align-items:stretch;flex-flow:column nowrap;place-content:safe center center}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--color-background: #fff;--color-foreground: #1b2437;--color-highlight: #eb2141;--font-size-base: 30px;}div#\:\$p > svg > foreignObject > section{background-image:none;font-family:"Chivo", sans-serif;font-size:var(--font-size-base);padding:30px 30px;display:flex;flex-direction:column;justify-content:center;align-items:center}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: var(--font-size-base)}div#\:\$p > svg > foreignObject > section header{position:absolute;top:0px;left:0px;right:0px;background-color:#eb2141;color:#fff;font-size:1em;font-weight:600}div#\:\$p > svg > foreignObject > section footer{position:absolute;bottom:0px;left:0px;right:0px;background-color:#1b2437;color:white;font-size:0.6em}div#\:\$p > svg > foreignObject > section::after{position:absolute;bottom:3px;right:3px;font-size:0.5em;font-weight:600;color:#ffffff;content:attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total)}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 0.5em}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){transform:rotate(-2deg);color:#eb2141;width:100%;text-align:center;margin-bottom:0.5em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){color:#1b2437}div#\:\$p > svg > foreignObject > section ul{text-align:left;width:85%}div#\:\$p > svg > foreignObject > section ul ul{font-size:0.9em}div#\:\$p > svg > foreignObject > section.centered{display:flex;flex-direction:column;justify-content:center;text-align:center}div#\:\$p > svg > foreignObject > section.inverse{background-color:#eb2141;color:#ffffff}div#\:\$p > svg > foreignObject > section.inverse :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section.inverse :is(h2, marp-h2){color:#fff}div#\:\$p > svg > foreignObject > section.inverse header{background-color:#fff;color:#eb2141}div#\:\$p > svg > foreignObject > section.inverse footer{background-color:#fff;color:#1b2437}div#\:\$p > svg > foreignObject > section.lead{align-items:flex-start;text-align:left}div#\:\$p > svg > foreignObject > section.lead :is(h1, marp-h1){font-size:3em;color:#eb2141;text-align:left;transform:rotate(-2deg);margin-bottom:0.2em}div#\:\$p > svg > foreignObject > section.lead :is(h1, marp-h1) strong{-webkit-text-stroke:1px #eb2141}div#\:\$p > svg > foreignObject > section.lead :is(h2, marp-h2){color:#eb2141;text-align:left}div#\:\$p > svg > foreignObject > section.lead :is(h2, marp-h2) strong{-webkit-text-stroke:1px #eb2141}div#\:\$p > svg > foreignObject > section.lead :is(h3, marp-h3){color:#eb2141;text-align:left}div#\:\$p > svg > foreignObject > section.lead :is(h3, marp-h3) strong{-webkit-text-stroke:1px #eb2141}div#\:\$p > svg > foreignObject > section.lead :is(h4, marp-h4){color:#eb2141;text-align:left}div#\:\$p > svg > foreignObject > section.lead :is(h4, marp-h4) strong{-webkit-text-stroke:1px #eb2141}div#\:\$p > svg > foreignObject > section.lead :is(h5, marp-h5){color:#eb2141;text-align:left}div#\:\$p > svg > foreignObject > section.lead :is(h5, marp-h5) strong{-webkit-text-stroke:1px #eb2141}div#\:\$p > svg > foreignObject > section.lead p{align-self:flex-end;text-align:right;font-size:0.8em}div#\:\$p > svg > foreignObject > section.code{background-color:#1b2437;color:#fff;justify-content:flex-start;padding-top:60px}div#\:\$p > svg > foreignObject > section.code header{background-color:#1b2437;color:#eb2141}div#\:\$p > svg > foreignObject > section.code footer{background-color:#1b2437;color:#fff}div#\:\$p > svg > foreignObject > section.code :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section.code :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section.code :is(h3, marp-h3){color:#fff;text-align:center;margin-bottom:20px;font-size:1.5em}div#\:\$p > svg > foreignObject > section.code :is(pre, marp-pre){background-color:#232a35;border:2px solid #eb2141;padding:30px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.5);width:90%;overflow:hidden}div#\:\$p > svg > foreignObject > section.code code{background-color:transparent;font-family:"JetBrains Mono", monospace;font-size:30px;line-height:1.4;color:#f8f8f2}div#\:\$p > svg > foreignObject > section.compact{font-size:0.8em;padding:30px;justify-content:flex-start}div#\:\$p > svg > foreignObject > section.compact{--marpit-root-font-size: 0.8em}div#\:\$p > svg > foreignObject > section.compact :is(h1, marp-h1){font-size:1.5em;margin-bottom:0.5em}div#\:\$p > svg > foreignObject > section blockquote{background:#f9f9f9;border-left:10px solid #eb2141;border-top:0.1em dashed #ff0000;margin:1.5em 10px;padding:0.5em 10px;font-style:italic;max-width:90%}div#\:\$p > svg > foreignObject > section blockquote::before{content:""}div#\:\$p > svg > foreignObject > section blockquote::after{content:""}div#\:\$p > svg > foreignObject > section img[alt~="center"]{display:block;margin:0 auto}div#\:\$p > svg > foreignObject > section code{font-family:"JetBrains Mono", monospace;background-color:#707070}div#\:\$p > svg > foreignObject > section{width:960px;height:720px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="1" data-paginate="true" data-header="UNRN Andina - 2026" data-footer="Ingeniería en Computación - UNRN Andina - 2026" data-class="lead" data-theme="UNRN" lang="C" class="lead" data-marpit-pagination="1" style="--paginate:true;--header:UNRN Andina - 2026;--footer:Ingeniería en Computación - UNRN Andina - 2026;--class:lead;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>UNRN Andina - 2026</header>
+
+<h1 is="marp-h1" data-auto-scaling id="aprender-con-inteligencia-artificial"> Aprender con inteligencia artificial</h1>
+<h2 id="ia-como-herramienta">IA como Herramienta</h2>
+<p>Curso de Ingreso<br />
+Universidad Nacional de Río Negro<br />
+Sede Andina</p>
+<hr />
+<blockquote>
+<p>Martín René Vilugrón<br />
+<a href="mailto:mrvilugron@unrn.edu.ar">mrvilugron@unrn.edu.ar</a></p>
+</blockquote>
+<footer>Ingeniería en Computación - UNRN Andina - 2026</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="2" data-paginate="true" data-header="La nueva realidad" data-theme="UNRN" lang="C" data-marpit-pagination="2" style="--paginate:true;--header:La nueva realidad;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>La nueva realidad</header>
+
+<h1 is="marp-h1" data-auto-scaling id="la-ia-ya-est%C3%A1-ac%C3%A1"> La IA ya está acá</h1>
+<p><strong>En herramientas cómo:</strong></p>
+<ul>
+<li>ChatGPT, Claude, Gemini, Copilot</li>
+<li>Cursor, Codeium</li>
+<li>¡Y muchas más…!</li>
+</ul>
+<p><strong>No se trata de si usar IA:</strong><br />
+<strong>Se trata de CÓMO usarla bien</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="3" data-paginate="true" data-theme="UNRN" lang="C" data-marpit-pagination="3" style="--paginate:true;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<blockquote>
+<p>Usar incorrectamente la IA en la universidad es como<br />
+pagar el gimnasio para que otro vaya a hacer ejercicio<br />
+<a href="%5Btext%5D(https://www.clarin.com/sociedad/jose-escamilla-usar-ia-tareas-escolares-pagar-suscripcion-gimnasio-pedirle-alguien-vaya-vos_0_9Hq0FuTGJu.html)">José Escamilla</a></p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="4" data-paginate="true" data-header="La verdad" data-theme="UNRN" lang="C" data-marpit-pagination="4" style="--paginate:true;--header:La verdad;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>La verdad</header>
+
+<h1 is="marp-h1" data-auto-scaling id="la-realidad-t%C3%A9cnica"> La realidad técnica</h1>
+<p>¡Los LLM’s no son oráculos!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="5" data-paginate="true" data-header="La nueva realidad" data-theme="UNRN" lang="C" data-marpit-pagination="5" style="--paginate:true;--header:La nueva realidad;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>La nueva realidad</header>
+
+<h2 id="las-alucinaciones-no-son-un-bug">Las alucinaciones no son un bug</h2>
+<h1 is="marp-h1" data-auto-scaling id="%C2%A1son-un-feature"> ¡Son un feature!</h1>
+<p>De su naturaleza probabilística</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="6" data-paginate="true" data-header="Filosofía" data-theme="UNRN" lang="C" data-marpit-pagination="6" style="--paginate:true;--header:Filosofía;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Filosofía</header>
+
+<h1 id="la-ia-como-herramienta-no-muleta-%F0%9F%A9%BC">La IA: como herramienta, no muleta <img class="emoji" draggable="false" alt="🩼" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1fa7c.svg" data-marp-twemoji=""/></h1>
+<p><strong><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> IA como:</strong></p>
+<ul>
+<li>Tutor personal 24/7</li>
+<li>Generador de explicaciones</li>
+<li>Verificador de ideas</li>
+<li>Fuente de ejemplos y ejercicios</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="7" data-paginate="true" data-header="Filosofía" data-theme="UNRN" lang="C" data-marpit-pagination="7" style="--paginate:true;--header:Filosofía;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Filosofía</header>
+
+<h1 id="la-ia-como-herramienta-no-muleta-%F0%9F%A9%BC-1">La IA: como herramienta, no muleta <img class="emoji" draggable="false" alt="🩼" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1fa7c.svg" data-marp-twemoji=""/></h1>
+<p><strong><img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" data-marp-twemoji=""/> IA NO como:</strong></p>
+<ul>
+<li>Reemplazo de aprender</li>
+<li>Copiadora de código</li>
+<li><em>Excusa</em> para no pensar</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="8" data-paginate="true" data-header="Desarrollo de habilidades" data-theme="UNRN" lang="C" data-marpit-pagination="8" style="--paginate:true;--header:Desarrollo de habilidades;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Desarrollo de habilidades</header>
+
+<h1 id="habilidades-cruciales">Habilidades cruciales</h1>
+<h2 id="programar-requiere">Programar requiere:</h2>
+<ul>
+<li>Pensamiento lógico</li>
+<li>Resolución de problemas</li>
+<li>Debugging mental</li>
+<li>Lectura de código</li>
+<li>Diseño de soluciones</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="9" data-paginate="true" data-header="Desarrollo de habilidades" data-footer="No hay atajos" data-theme="UNRN" lang="C" data-marpit-pagination="9" style="--paginate:true;--header:Desarrollo de habilidades;--footer:No hay atajos;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Desarrollo de habilidades</header>
+
+<h1 is="marp-h1" data-auto-scaling id="la-ia-puede-dar-c%C3%B3digo"> La IA puede dar código...</h1>
+<h1 is="marp-h1" data-auto-scaling id="pero-no-puede-darte-estas-habilidades">Pero no puede darte estas habilidades</h1>
+<h1 is="marp-h1" data-auto-scaling id="solo-la-pr%C3%A1ctica-genuina-las-desarrolla">Solo la práctica genuina las desarrolla</h1>
+<footer>No hay atajos</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="10" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas"> ¿Preguntas?</h1>
+<p>¿Cómo venimos?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="11" data-paginate="true" data-header="Principio fundamental" data-theme="UNRN" lang="C" data-marpit-pagination="11" style="--paginate:true;--header:Principio fundamental;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Principio fundamental</header>
+
+<h1 is="marp-h1" data-auto-scaling id="entender-lo-que-copias"> Entender lo que copias</h1>
+<h2 id="y-c%C3%B3mo-regla">Y cómo regla:</h2>
+<blockquote>
+<p>No uses código que no entiendes</p>
+</blockquote>
+<h3 id="si-no-pod%C3%A9s-explicar-lo-que-sali%C3%B3">Si no podés explicar lo que salió…</h3>
+<h3 id="no-es-una-buena-idea-que-lo-uses">no es una buena idea que lo uses</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="12" data-paginate="true" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="12" style="--paginate:true;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpara-qu%C3%A9"> ¿Para qué</h1>
+<h1 is="marp-h1" data-auto-scaling id="usar-la-ia"> usar la IA?</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="13" data-paginate="true" data-header="Para qué, y cuando..." data-footer="Mejores practicas" data-theme="UNRN" lang="C" data-marpit-pagination="13" style="--paginate:true;--header:Para qué, y cuando...;--footer:Mejores practicas;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Para qué, y cuando...</header>
+
+<h1 id="%E2%9C%85-cu%C3%A1ndo-usar-la-ia"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Cuándo usar la IA</h1>
+<ul>
+<li><strong>Explicaciones</strong></li>
+<li><strong>Debugging</strong></li>
+<li><strong>Crear implementaciones alternativas</strong></li>
+<li><strong>Generar casos de prueba</strong></li>
+<li><strong>Explicar conceptos</strong></li>
+<li><strong>Sugerencias de mejora</strong></li>
+</ul>
+<footer>Mejores practicas</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="14" data-paginate="true" data-header="✅ ¿Para qué usar la IA? - I" data-theme="UNRN" lang="C" data-marpit-pagination="14" style="--paginate:true;--header:✅ ¿Para qué usar la IA? - I;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> ¿Para qué usar la IA? - I</header>
+
+<h1 is="marp-h1" data-auto-scaling id="explicaciones"> Explicaciones:</h1>
+<ul>
+<li>“Explicá cómo funcionan las listas en Python”<br />
+”¿Qué diferencia hay entre <code>append</code> y <code>extend</code>?”</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="15" data-paginate="true" data-header="✅ ¿Para qué usar la IA? - II" data-theme="UNRN" lang="C" data-marpit-pagination="15" style="--paginate:true;--header:✅ ¿Para qué usar la IA? - II;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> ¿Para qué usar la IA? - II</header>
+
+<h1 is="marp-h1" data-auto-scaling id="debugging-%F0%9F%90%9B"> Debugging <img class="emoji" draggable="false" alt="🐛" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f41b.svg" data-marp-twemoji=""/></h1>
+<ul>
+<li>“Este código me da error [pegar código].</li>
+<li>¿Explica por qué falla de esta forma…”</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="16" data-paginate="true" data-header="✅ ¿Para qué usar la IA? - III" data-theme="UNRN" lang="C" data-marpit-pagination="16" style="--paginate:true;--header:✅ ¿Para qué usar la IA? - III;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> ¿Para qué usar la IA? - III</header>
+
+<h1 is="marp-h1" data-auto-scaling id="generar-alternativas-%E2%91%82"> Generar alternativas ⑂</h1>
+<ul>
+<li>“Tengo este código [pegar].<br />
+¿Hay una forma más simple de hacer esto?”</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="17" data-paginate="true" data-header="✅ ¿Para qué usar la IA? - IV" data-theme="UNRN" lang="C" data-marpit-pagination="17" style="--paginate:true;--header:✅ ¿Para qué usar la IA? - IV;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> ¿Para qué usar la IA? - IV</header>
+
+<h1 is="marp-h1" data-auto-scaling id="generar-tests"> Generar tests</h1>
+<ul>
+<li>“Dame casos de prueba para esta función:<br />
+[pegar función]”</li>
+<li>¿Cómo puedo probar esta función?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="18" data-paginate="true" data-header="✅ ¿Para qué usar la IA? - V" data-theme="UNRN" lang="C" data-marpit-pagination="18" style="--paginate:true;--header:✅ ¿Para qué usar la IA? - V;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> ¿Para qué usar la IA? - V</header>
+
+<h1 is="marp-h1" data-auto-scaling id="explicar-conceptos"> Explicar conceptos</h1>
+<ul>
+<li>“Explicá qué es la recursividad con un ejemplo simple”</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="19" data-paginate="true" data-header="✅ ¿Para qué usar la IA? - VI" data-theme="UNRN" lang="C" data-marpit-pagination="19" style="--paginate:true;--header:✅ ¿Para qué usar la IA? - VI;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> ¿Para qué usar la IA? - VI</header>
+
+<h1 is="marp-h1" data-auto-scaling id="sugerencias-de-mejora"> Sugerencias de mejora</h1>
+<p>[refactorizaciones*]</p>
+<blockquote>
+<p>“Este código funciona pero es confuso.<br />
+¿Qué puedo hacer para mejorarlo? [pegar código]”</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="20" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFqu%C3%A9-m%C3%A1s-se"> ¿Qué más se</h1>
+<h1 is="marp-h1" data-auto-scaling id="les-ocurre"> les ocurre?</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="21" data-paginate="true" data-header="Para qué, y cuando..." data-footer="Mejores practicas" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="21" style="--paginate:true;--header:Para qué, y cuando...;--footer:Mejores practicas;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Para qué, y cuando...</header>
+
+<h2 id="%C2%BFpara-qu%C3%A9-1">¿Para qué</h2>
+<h1 is="marp-h1" data-auto-scaling id="no%E2%B8%BB"> —NO⸻</h1>
+<h2 id="usar-la-ia-1">usar la IA?</h2>
+<footer>Mejores practicas</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="22" data-paginate="true" data-header="Cuándo NO usar IA - I" data-theme="UNRN" lang="C" data-marpit-pagination="22" style="--paginate:true;--header:Cuándo NO usar IA - I;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Cuándo NO usar IA - I</header>
+
+<h1 is="marp-h1" data-auto-scaling id="%E2%9D%8C-generar-una-tarea-completa"> <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" data-marp-twemoji=""/> Generar una tarea completa</h1>
+<ul>
+<li>“Resolvé el ejercicio 3 de la práctica”</li>
+<li>“Dame el código para [enunciado completo]”</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="23" data-paginate="true" data-header="Cuándo NO usar IA - II" data-theme="UNRN" lang="C" data-marpit-pagination="23" style="--paginate:true;--header:Cuándo NO usar IA - II;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Cuándo NO usar IA - II</header>
+
+<h1 is="marp-h1" data-auto-scaling id="%E2%9D%8C-copiar-m%C3%AD-entender"> <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" data-marp-twemoji=""/> Copiar mí entender</h1>
+<ul>
+<li>Pedir código y entregarlo tal cual</li>
+<li>Usarlo sin modificarlo</li>
+<li>No saber explicarlo</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="24" data-paginate="true" data-header="Cuándo NO usar IA - III" data-theme="UNRN" lang="C" data-marpit-pagination="24" style="--paginate:true;--header:Cuándo NO usar IA - III;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Cuándo NO usar IA - III</header>
+
+<h1 is="marp-h1" data-auto-scaling id="%E2%9D%8C-reemplazo-de-pr%C3%A1ctica"> <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" data-marp-twemoji=""/> Reemplazo de práctica</h1>
+<ul>
+<li>Evitar programar uno mismo</li>
+<li>No hacer ejercicios por pereza</li>
+<li>Usar IA para cada pequeño detalle</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="25" data-paginate="true" data-header="Cuándo NO usar IA - IV" data-theme="UNRN" lang="C" data-marpit-pagination="25" style="--paginate:true;--header:Cuándo NO usar IA - IV;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Cuándo NO usar IA - IV</header>
+
+<h1 is="marp-h1" data-auto-scaling id="%E2%9D%8C-uso-sin-verificaci%C3%B3n"> <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/274c.svg" data-marp-twemoji=""/> Uso sin verificación</h1>
+<ul>
+<li>Confiar ciegamente en output</li>
+<li>No probar el código</li>
+<li>No leer los apuntes y/o documentación</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="26" data-paginate="true" data-theme="UNRN" lang="C" data-marpit-pagination="26" style="--paginate:true;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="si-es-por-aprender"> Si es por <em>aprender</em></h1>
+<h1 is="marp-h1" data-auto-scaling id="la-ia-ya-sabe"> la IA ya sabe</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="27" data-paginate="true" data-theme="UNRN" lang="C" data-marpit-pagination="27" style="--paginate:true;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="si-es-por-programar"> Si es por <em>programar</em></h1>
+<h1 is="marp-h1" data-auto-scaling id="la-ia-ya-sabe-1"> la IA ya sabe</h1>
+<p>Además, todo lo que le damos se usa para su entrenamiento :-D</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="28" data-paginate="true" data-theme="UNRN" lang="C" data-marpit-pagination="28" style="--paginate:true;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="no-pierdan-la-oportunidad"> No pierdan la oportunidad</h1>
+<h1 is="marp-h1" data-auto-scaling id="de-preguntar"> de preguntar</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="29" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas-1"> ¿Preguntas?</h1>
+<p>¿Ya que estamos? <img class="emoji" draggable="false" alt="☺️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/263a.svg" data-marp-twemoji=""/></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="30" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFy-qu%C3%A9"> ¿Y qué</h1>
+<h1 is="marp-h1" data-auto-scaling id="podemos-hacer"> podemos hacer?</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="31" data-paginate="true" data-header="¿Y qué podemos hacer?" data-theme="UNRN" lang="C" data-marpit-pagination="31" style="--paginate:true;--header:¿Y qué podemos hacer?;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>¿Y qué podemos hacer?</header>
+
+<h1 is="marp-h1" data-auto-scaling id="1-intent%C3%A1-solito-primero"> 1. Intentá solito primero</h1>
+<ul>
+<li>Programa tu solución</li>
+<li>Llegá lo más lejos posible</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="32" data-paginate="true" data-header="¿Y qué podemos hacer?" data-theme="UNRN" lang="C" data-marpit-pagination="32" style="--paginate:true;--header:¿Y qué podemos hacer?;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>¿Y qué podemos hacer?</header>
+
+<h1 is="marp-h1" data-auto-scaling id="2-identifica-un-obst%C3%A1culo"> 2. Identifica un obstáculo</h1>
+<ul>
+<li>¿Qué específicamente no sabés?</li>
+<li>Formula pregunta precisa</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="33" data-paginate="true" data-header="¿Y qué podemos hacer?" data-theme="UNRN" lang="C" data-marpit-pagination="33" style="--paginate:true;--header:¿Y qué podemos hacer?;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>¿Y qué podemos hacer?</header>
+
+<h1 is="marp-h1" data-auto-scaling id="3-consulta-a-la-iaprofe"> 3. Consulta a la {IA|Profe}</h1>
+<ul>
+<li>Una pregunta específica pidiendo explicación, no la solución</li>
+<li>Una pista de como seguir sin dar la respuesta</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="34" data-paginate="true" data-header="¿Y qué podemos hacer?" data-theme="UNRN" lang="C" data-marpit-pagination="34" style="--paginate:true;--header:¿Y qué podemos hacer?;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>¿Y qué podemos hacer?</header>
+
+<h1 is="marp-h1" data-auto-scaling id="4-comprende-la-respuesta"> 4. Comprende la respuesta</h1>
+<ul>
+<li>Lee y analiza</li>
+<li>Experimenta modificando</li>
+<li>¿Por qué me dio esta respuesta?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="35" data-paginate="true" data-header="¿Y qué podemos hacer?" data-theme="UNRN" lang="C" data-marpit-pagination="35" style="--paginate:true;--header:¿Y qué podemos hacer?;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>¿Y qué podemos hacer?</header>
+
+<h1 is="marp-h1" data-auto-scaling id="5-aplica-e-integra"> 5. Aplica e integra</h1>
+<ul>
+<li>Adapta a tu código</li>
+<li>Verifica que funcione</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="36" data-paginate="true" data-theme="UNRN" lang="C" data-marpit-pagination="36" style="--paginate:true;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="con-o-sin-ia"> Con o sin IA</h1>
+<h1 is="marp-h1" data-auto-scaling id="esto-aplica-a-aprender"> esto <em>aplica a aprender</em></h1>
+<p>en general</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="37" data-paginate="true" data-header="En resumen... ¿Y qué podemos hacer?" data-theme="UNRN" lang="C" data-marpit-pagination="37" style="--paginate:true;--header:En resumen... ¿Y qué podemos hacer?;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>En resumen... ¿Y qué podemos hacer?</header>
+
+<h1 id="1-intent%C3%A1-solito-primero-1">1. Intentá solito primero</h1>
+<h1 id="2-identifica-un-obst%C3%A1culo-1">2. Identifica un obstáculo</h1>
+<h1 id="3-consult%C3%A1">3. Consultá</h1>
+<h1 id="4-comprende-la-respuesta-1">4. Comprende la respuesta</h1>
+<h1 id="5-aplica-e-integra-1">5. Aplica e integra</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="38" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas-2"> ¿Preguntas?</h1>
+<p>¿Cómo venimos?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="39" data-paginate="true" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="39" style="--paginate:true;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="estructura"> Estructura</h1>
+<p>¿Cómo preguntar?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="40" data-paginate="true" data-header="¿Como preguntar?" data-footer="Buenas practicas (generales)" data-theme="UNRN" lang="C" data-marpit-pagination="40" style="--paginate:true;--header:¿Como preguntar?;--footer:Buenas practicas (generales);--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>¿Como preguntar?</header>
+
+<h1 is="marp-h1" data-auto-scaling id="estructura-b%C3%A1sica"> Estructura básica</h1>
+<p>❲CONTEXTO❳ + ❲OBJETIVO❳ + ❲RESTRICCIONES❳ + ❲FORMATO DESEADO❳</p>
+<footer>Buenas practicas (generales)</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="41" data-paginate="true" data-header="Estructura básica" data-footer="Buenas practicas - 1" data-theme="UNRN" lang="C" data-marpit-pagination="41" style="--paginate:true;--header:Estructura básica;--footer:Buenas practicas - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 is="marp-h1" data-auto-scaling id="contexto"> Contexto</h1>
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFqui%C3%A9n-so-v%C3%B3-y-qu%C3%A9-sab%C3%A9s"> ¿Quién so vó y qué sabés?</h1>
+<footer>Buenas practicas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="42" data-paginate="true" data-header="Estructura básica" data-footer="Contexto - 1" data-theme="UNRN" lang="C" data-marpit-pagination="42" style="--paginate:true;--header:Estructura básica;--footer:Contexto - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 is="marp-h1" data-auto-scaling id="componentes"> Componentes</h1>
+<ul>
+<li>Tu nivel actual (principiante, estudiante de primer año, etc.)</li>
+<li>Qué tema estás estudiando</li>
+<li>Qué conocimientos previos tenés</li>
+<li>En qué materia o curso estás</li>
+</ul>
+<footer>Contexto - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="43" data-paginate="true" data-header="Estructura básica" data-footer="Contexto - 1" data-theme="UNRN" lang="C" data-marpit-pagination="43" style="--paginate:true;--header:Estructura básica;--footer:Contexto - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 id="ejemplos">Ejemplos</h1>
+<p>“Estoy aprendiendo Python en un curso de ingreso a programación”</p>
+<hr />
+"Estoy viendo lazos `for` y ya entiendo variables y condicionales"
+<hr />
+"Soy principiante y estoy haciendo mi primer programa con listas"
+<footer>Contexto - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="44" data-paginate="true" data-header="Estructura básica" data-footer="Buenas practicas - 2" data-theme="UNRN" lang="C" data-marpit-pagination="44" style="--paginate:true;--header:Estructura básica;--footer:Buenas practicas - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 is="marp-h1" data-auto-scaling id="objetivos"> Objetivos</h1>
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFqu%C3%A9-quer%C3%A9"> ¿Qué queré?</h1>
+<footer>Buenas practicas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="45" data-paginate="true" data-header="Estructura básica" data-footer="Objetivos - 2" data-theme="UNRN" lang="C" data-marpit-pagination="45" style="--paginate:true;--header:Estructura básica;--footer:Objetivos - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 id="algunos-objetivos-de-aprendizaje">(algunos) objetivos de aprendizaje</h1>
+<ul>
+<li><strong>Explicar</strong></li>
+<li><strong>Comparar</strong></li>
+<li><strong>Guiar</strong></li>
+<li><strong>Revisar</strong></li>
+<li><strong>Ejemplificar</strong></li>
+</ul>
+<footer>Objetivos - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="46" data-paginate="true" data-header="Estructura básica" data-footer="Objetivos - 2" data-theme="UNRN" lang="C" data-marpit-pagination="46" style="--paginate:true;--header:Estructura básica;--footer:Objetivos - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 id="ejemplos-1">Ejemplos</h1>
+<p>“Explicame cuándo usar <code>while</code> en lugar de <code>for</code>”</p>
+<hr />
+"¿Mi código maneja correctamente el caso de lista vacía?"
+<hr />
+"Mi función devuelve `None` cuando debería devolver la suma"
+<footer>Objetivos - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="47" data-paginate="true" data-header="Estructura básica" data-footer="Buenas practicas - 3" data-theme="UNRN" lang="C" data-marpit-pagination="47" style="--paginate:true;--header:Estructura básica;--footer:Buenas practicas - 3;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 is="marp-h1" data-auto-scaling id="restricciones"> Restricciones</h1>
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFqu%C3%A9-n%C3%B3-quer%C3%A9"> ¿Qué nó queré?</h1>
+<footer>Buenas practicas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="48" data-paginate="true" data-header="Estructura básica" data-footer="Restricciones - 3" data-theme="UNRN" lang="C" data-marpit-pagination="48" style="--paginate:true;--header:Estructura básica;--footer:Restricciones - 3;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 id="ejemplos-2">Ejemplos</h1>
+<ul>
+<li>“No me des la solución completa”</li>
+<li>“No uses conceptos que todavía no vi (como comprensión de listas)”</li>
+<li>“Solo usá las estructuras que vimos en clase: <code>if</code>, <code>while</code>, <code>for</code>”</li>
+<li>“Dame pistas, no respuestas”</li>
+<li>“Explicame el concepto sin escribir código”</li>
+<li>“Si hay un error, decime en qué zona está, pero no lo corrijas”</li>
+</ul>
+<footer>Restricciones - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="49" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<p>Qué quizás sea</p>
+<h1 is="marp-h1" data-auto-scaling id="%C2%A1lo-m%C3%A1s-importante"> ¡Lo más importante!</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="50" data-paginate="true" data-header="Estructura básica" data-footer="Buenas practicas - 4" data-theme="UNRN" lang="C" data-marpit-pagination="50" style="--paginate:true;--header:Estructura básica;--footer:Buenas practicas - 4;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 is="marp-h1" data-auto-scaling id="formato-de-salida"> Formato de salida</h1>
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFc%C3%B3mo-lo-quer%C3%A9"> ¿Cómo lo queré?</h1>
+<footer>Buenas practicas - 4</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="51" data-paginate="true" data-header="Estructura básica" data-footer="Formato de salida - 4" data-theme="UNRN" lang="C" data-marpit-pagination="51" style="--paginate:true;--header:Estructura básica;--footer:Formato de salida - 4;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Estructura básica</header>
+
+<h1 id="formatos-%C3%BAtiles">Formatos útiles</h1>
+<ul>
+<li>“Explicame paso a paso”</li>
+<li>“Usá un ejemplo concreto”</li>
+<li>“Primero la teoría, después un ejemplo”</li>
+<li>“Organizá la respuesta en: concepto, ejemplo, errores comunes”</li>
+<li>“Respondeme con preguntas que me hagan pensar”</li>
+<li>“Dame una analogía del mundo real”</li>
+<li>“Mostrá la ejecución línea por línea”</li>
+</ul>
+<footer>Formato de salida - 4</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="52" data-paginate="true" data-header="Prompting completo" data-footer="Buenas practicas" data-theme="UNRN" lang="C" data-marpit-pagination="52" style="--paginate:true;--header:Prompting completo;--footer:Buenas practicas;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Prompting completo</header>
+
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFy"> ¿Y…?</h1>
+<h2 id="como-se-usa-todo-esto-junto">Como se usa todo esto junto</h2>
+<footer>Buenas practicas</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="53" data-paginate="true" data-header="Ejemplo completo" data-footer="Integración" data-class="code" data-theme="UNRN" lang="C" class="code" data-marpit-pagination="53" style="--paginate:true;--header:Ejemplo completo;--footer:Integración;--class:code;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Ejemplo completo</header>
+
+<h1 id="ejemplo-completo">Ejemplo completo</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">[CONTEXTO]
+Estoy aprendiendo Python en el curso de ingreso. Ya vi variables, 
+input/print, y condicionales. Ahora estoy empezando con lazos.
+
+[OBJETIVO]  
+Necesito entender cuándo usar `while` vs `for`.
+
+[RESTRICCIONES]
+No me des ejemplos muy complejos. Usá solo las estructuras que 
+mencioné que conozco.
+
+[FORMATO]
+Dame una regla simple para decidir cuál usar, seguida de un ejemplo 
+de cada caso donde se note claramente por qué uno es mejor que el otro.
+</code></pre>
+<footer>Integración</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="54" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas-3"> ¿Preguntas?</h1>
+<h2 id="%C2%BFc%C3%B3mo-venimos"><strong>¿Cómo venimos?</strong></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="55" data-paginate="true" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="55" style="--paginate:true;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="t%C3%A1cticas"> Tácticas</h1>
+<p>¿Cómo podemos hacer?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="56" data-paginate="true" data-header="Método de Feynman Inverso" data-footer="Tacticas - 1" data-class="lead" data-theme="UNRN" lang="C" class="lead" data-marpit-pagination="56" style="--paginate:true;--header:Método de Feynman Inverso;--footer:Tacticas - 1;--class:lead;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Método de Feynman Inverso</header>
+
+<h1 is="marp-h1" data-auto-scaling id="m%C3%A9todo-de-feynman-inverso"> Método de Feynman Inverso</h1>
+<h2 id="ense%C3%B1ar-para-aprender">Enseñar para aprender</h2>
+<p>Técnicas Avanzadas de IA</p>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="57" data-paginate="true" data-footer="Tacticas - 1" data-theme="UNRN" lang="C" data-marpit-pagination="57" style="--paginate:true;--footer:Tacticas - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 id="el-m%C3%A9todo-feynman-original">El Método Feynman Original</h1>
+<ol>
+<li>Elegir un concepto</li>
+<li>Explicarlo con <strong>palabras simples</strong></li>
+<li>Identificar huecos en la explicación</li>
+<li>Volver a estudiar y simplificar</li>
+</ol>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="58" data-paginate="true" data-footer="Tacticas - 1" data-theme="UNRN" lang="C" data-marpit-pagination="58" style="--paginate:true;--footer:Tacticas - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 id="la-versi%C3%B3n-inversa">La Versión Inversa</h1>
+<p>La IA actúa como <strong>estudiante curioso</strong>:</p>
+<ul>
+<li>Vos le enseñás</li>
+<li>Hace preguntas incisivas</li>
+<li>Señala inconsistencias</li>
+<li>Expone comprensión superficial</li>
+</ul>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="59" data-paginate="true" data-footer="Tacticas - 1" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="59" style="--paginate:true;--footer:Tacticas - 1;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="ense%C3%B1ar-es-la-forma"> Enseñar es la forma</h1>
+<h1 is="marp-h1" data-auto-scaling id="m%C3%A1s-efectiva-de-aprender"> más efectiva de aprender</h1>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="60" data-paginate="true" data-footer="Tacticas - 1" data-theme="UNRN" lang="C" data-marpit-pagination="60" style="--paginate:true;--footer:Tacticas - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 id="%C2%BFcu%C3%A1ndo-usarlo">¿Cuándo usarlo?</h1>
+<ul>
+<li>Creés que entendés, pero querés verificar</li>
+<li>Preparación para exámenes</li>
+<li>Detectar lagunas en tu conocimiento</li>
+<li>Antes de explicarle algo a un compañero</li>
+</ul>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="61" data-paginate="true" data-footer="Tacticas - 1" data-theme="UNRN" lang="C" data-marpit-pagination="61" style="--paginate:true;--footer:Tacticas - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 id="%C2%BFpor-qu%C3%A9-funciona">¿Por qué funciona?</h1>
+<ul>
+<li>Preguntas difíciles exponen <strong>conocimiento superficial</strong></li>
+<li>La IA no se cansa ni te juzga</li>
+<li>Simula un estudiante infinitamente curioso</li>
+<li>Feedback inmediato sobre tu explicación</li>
+</ul>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="62" data-paginate="true" data-footer="Tacticas - 1" data-class="code" data-theme="UNRN" lang="C" class="code" data-marpit-pagination="62" style="--paginate:true;--footer:Tacticas - 1;--class:code;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3"><pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">Quiero explicarte [concepto] como si fueras 
+un estudiante que no sabe nada del tema.
+
+Tu rol es:
+1. Escuchar mi explicación
+2. Hacer preguntas cuando algo no quede claro
+3. Señalar si uso términos sin definirlos
+4. Pedirme ejemplos si es muy abstracto
+5. Al final, decirme qué partes fueron 
+   claras y cuáles necesitan trabajo
+
+Empiezo: [tu explicación]
+</code></pre>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="63" data-paginate="true" data-footer="Tacticas - 1" data-theme="UNRN" lang="C" data-marpit-pagination="63" style="--paginate:true;--footer:Tacticas - 1;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h2 id="ejemplo-concreto">Ejemplo Concreto</h2>
+<p><strong>Vos:</strong></p>
+<blockquote>
+<p>&quot;Una variable es como una caja donde guardás cosas.&quot;</p>
+</blockquote>
+<p><strong>IA pregunta:</strong></p>
+<blockquote>
+<p>&quot;¿Qué tipo de cosas puedo guardar? ¿Puedo guardar más de una cosa? ¿Qué pasa si quiero guardar algo más grande?&quot;</p>
+</blockquote>
+<footer>Tacticas - 1</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="64" data-header="Variante: Para Exámenes" data-class="code" data-theme="UNRN" lang="C" class="code" style="--header:Variante: Para Exámenes;--class:code;--theme:UNRN;" data-size="4:3">
+<header>Variante: Para Exámenes</header>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">Me preparo para un examen sobre [tema]. 
+Voy a explicarte los conceptos y vos 
+actuás como profesor que evalúa.
+
+Después de cada explicación mía:
+1. Calificá mi comprensión del 1 al 5
+2. Señalá errores conceptuales
+3. Indicá qué me falta mencionar
+4. Haceme una pregunta de examen
+
+Empiezo con [concepto 1]: [tu explicación]
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="65" data-theme="UNRN" lang="C" style="--theme:UNRN;" data-size="4:3">
+<h1 id="y-en-las-palabras-del-autor">Y en las palabras del autor</h1>
+<blockquote>
+<p>Si no puedes explicar algo en términos simple, es que no lo entendes.<br />
+— <a href="https://x.com/ProfFeynman/status/1370595934191591430?lang=en">Richard Feynman</a></p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="66" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas-4"> ¿Preguntas?</h1>
+<h2 id="%C2%BFc%C3%B3mo-venimos-1"><strong>¿Cómo venimos?</strong></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="67" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-class="lead" data-theme="UNRN" lang="C" class="lead" data-marpit-pagination="67" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--class:lead;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+
+<h1 is="marp-h1" data-auto-scaling id="explicaci%C3%B3n-por-capas"> Explicación por Capas</h1>
+<h2 id="de-lo-simple-a-lo-complejo">De lo simple a lo complejo</h2>
+<p>Técnicas Avanzadas de IA</p>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="68" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-theme="UNRN" lang="C" data-marpit-pagination="68" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+<h1 id="la-idea-central">La Idea Central</h1>
+<p>Los conceptos técnicos tienen <strong>múltiples niveles</strong> de abstracción</p>
+<p>Pedimos explicaciones progresivas:</p>
+<ol>
+<li>Intuición general</li>
+<li>Detalle técnico</li>
+<li>Implementación</li>
+</ol>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="69" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-theme="UNRN" lang="C" data-marpit-pagination="69" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+<h1 id="%C2%BFcu%C3%A1ndo-usarlo-1">¿Cuándo usarlo?</h1>
+<ul>
+<li>Concepto abstracto o difícil</li>
+<li>Preparar explicaciones propias</li>
+<li>Verificar comprensión profunda</li>
+<li>Conectar con conocimiento previo</li>
+</ul>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="70" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-theme="UNRN" lang="C" data-marpit-pagination="70" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+<h1 id="%C2%BFpor-qu%C3%A9-funciona-1">¿Por qué funciona?</h1>
+<ul>
+<li>Crea <strong>&quot;puentes cognitivos&quot;</strong></li>
+<li>Conecta lo nuevo con lo familiar</li>
+<li>Múltiples perspectivas</li>
+<li>Comprensión progresiva</li>
+</ul>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="71" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-class="code" data-theme="UNRN" lang="C" class="code" data-marpit-pagination="71" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--class:code;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">Explicame qué es [concepto] en tres niveles:
+
+1. Nivel 1: Como para alguien sin 
+   conocimientos de programación
+
+2. Nivel 2: Con más detalle técnico 
+   para un estudiante de primer año
+
+3. Nivel 3: Con los detalles de 
+   implementación en Python
+</code></pre>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="72" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-theme="UNRN" lang="C" data-marpit-pagination="72" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+<h1 id="ejemplo-la-recursi%C3%B3n">Ejemplo: La Recursión</h1>
+<p><strong>Nivel 1</strong> (sin programación):</p>
+<blockquote>
+<p>&quot;Es como mirarte en dos espejos enfrentados: cada reflejo contiene otro reflejo más pequeño.&quot;</p>
+</blockquote>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="73" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-theme="UNRN" lang="C" data-marpit-pagination="73" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+<h1 id="ejemplo-la-recursi%C3%B3n-1">Ejemplo: La Recursión</h1>
+<p><strong>Nivel 2</strong> (estudiante):</p>
+<blockquote>
+<p>&quot;Es cuando una función se llama a sí misma para resolver una versión más pequeña del mismo problema.&quot;</p>
+</blockquote>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="74" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-theme="UNRN" lang="C" data-marpit-pagination="74" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+<h1 id="ejemplo-la-recursi%C3%B3n-2">Ejemplo: La Recursión</h1>
+<p><strong>Nivel 3</strong> (implementación):</p>
+<blockquote>
+<p>&quot;En Python, cada llamada recursiva agrega un frame al call stack, con su propio scope de variables locales...&quot;</p>
+</blockquote>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="75" data-paginate="true" data-header="Explicación por Capas" data-footer="Tacticas - 2" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="75" style="--paginate:true;--header:Explicación por Capas;--footer:Tacticas - 2;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Explicación por Capas</header>
+
+<h1 is="marp-h1" data-auto-scaling id="tres-niveles"> Tres niveles</h1>
+<h2 id="analog%C3%ADa-%E2%9F%BE-concepto-%E2%9F%BE-c%C3%B3digo">Analogía ⟾ Concepto ⟾ Código</h2>
+<footer>Tacticas - 2</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="76" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas-5"> ¿Preguntas?</h1>
+<h2 id="%C2%BFc%C3%B3mo-venimos-2"><strong>¿Cómo venimos?</strong></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="77" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-class="lead" data-theme="UNRN" lang="C" class="lead" data-marpit-pagination="77" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--class:lead;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+
+<h1 is="marp-h1" data-auto-scaling id="debugging-guiado"> Debugging Guiado</h1>
+<h2 id="aprender-a-encontrar-errores">Aprender a encontrar errores</h2>
+<p>Técnicas Avanzadas de IA</p>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="78" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-theme="UNRN" lang="C" data-marpit-pagination="78" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+<h1 id="el-problema">El Problema</h1>
+<p>Cuando pedís que te <strong>corrijan</strong> el código:</p>
+<ul>
+<li>Perdés la oportunidad de <strong>aprender</strong></li>
+<li>No desarrollás habilidad de debugging</li>
+<li>Dependencia de la IA</li>
+</ul>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="79" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="79" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+
+<h1 is="marp-h1" data-auto-scaling id="el-debugging-es-una-habilidad"> El debugging es una habilidad</h1>
+<h1 is="marp-h1" data-auto-scaling id="solo-se-desarrolla-practic%C3%A1ndola"> Solo se desarrolla practicándola</h1>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="80" data-marpit-fragments="1" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-theme="UNRN" lang="C" data-marpit-pagination="80" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+<h1 id="%C2%BFcu%C3%A1ndo-usarlo-2">¿Cuándo usarlo?</h1>
+<ul>
+<li>Código que no funciona</li>
+<li>Ya invertiste tiempo buscando el error</li>
+<li>Errores <strong>lógicos</strong> especialmente
+<ul>
+<li data-marpit-fragment="1">(el código corre pero da mal)</li>
+</ul>
+</li>
+</ul>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="81" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-theme="UNRN" lang="C" data-marpit-pagination="81" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+<h1 id="%C2%BFpor-qu%C3%A9-funciona-2">¿Por qué funciona?</h1>
+<ul>
+<li>Desarrolla lectura crítica de código</li>
+<li>Formular hipótesis sobre comportamiento</li>
+<li>Habilidades <strong>transferibles</strong></li>
+<li>Aprendés el proceso, no solo la solución</li>
+</ul>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="82" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-class="code" data-theme="UNRN" lang="C" class="code" data-marpit-pagination="82" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--class:code;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+
+<h1 id="plantilla-principal">Plantilla Principal</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">Tengo este código que debería hacer 
+[descripción] pero obtiene [resultado]:
+
+[código con error]
+
+No me corrijas el código. En su lugar:
+1. Ayudame a identificar qué parte es 
+   responsable del problema
+2. Explicame qué está haciendo esa parte
+3. Haceme preguntas para descubrir el error
+</code></pre>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="83" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-class="code" data-theme="UNRN" lang="C" class="code" data-marpit-pagination="83" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--class:code;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+
+<h1 id="variante-con-mensaje-de-error">Variante: Con Mensaje de Error</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-text">Estoy debuggeando este código:
+[código con error]
+
+Error obtenido:
+[mensaje de error]
+
+Lo que ya intenté:
+- [intento 1]
+- [intento 2]
+
+¿Qué otras estrategias de debugging puedo 
+usar? Guiame sin darme la solución directa.
+</code></pre>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="84" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" data-marpit-pagination="84" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--class:inverse;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+
+<h1 is="marp-h1" data-auto-scaling id="no-pidas-correcciones"> No pidas correcciones</h1>
+<h2 id="ped%C3%AD-que-te-ense%C3%B1e-a-encontrar-el-error">Pedí <em>que te enseñe a encontrar el error</em></h2>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="85" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas-6"> ¿Preguntas?</h1>
+<h2 id="%C2%BFc%C3%B3mo-venimos-3"><strong>¿Cómo venimos?</strong></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="86" data-paginate="true" data-header="Verificación" data-footer="Consideraciones finales" data-theme="UNRN" lang="C" data-marpit-pagination="86" style="--paginate:true;--header:Verificación;--footer:Consideraciones finales;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Verificación</header>
+
+<h1 id="no-conf%C3%ADes-ciegamente">No confíes ciegamente</h1>
+<h2 id="la-ia-puede-equivocarse">La IA puede equivocarse:</h2>
+<ul>
+<li>Código con bugs</li>
+<li>Explicaciones incorrectas</li>
+<li>Soluciones complejas innecesariamente</li>
+</ul>
+<p><em>❲O por lo menos, irse por las ramas❳</em></p>
+<footer>Consideraciones finales</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="87" data-paginate="true" data-header="Debugging Guiado" data-footer="Tacticas - 3" data-theme="UNRN" lang="C" data-marpit-pagination="87" style="--paginate:true;--header:Debugging Guiado;--footer:Tacticas - 3;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Debugging Guiado</header>
+<h1 is="marp-h1" data-auto-scaling id="verific%C3%A1-siempre"> Verificá siempre:</h1>
+<ol>
+<li><strong>Ejecutar código</strong> - ¿funciona?</li>
+<li><strong>Probar casos</strong> - ¿todos los casos?</li>
+<li><strong>Leer documentación</strong> - ¿coincide con oficial?</li>
+<li><strong>Preguntar a humanos</strong> - ¿docente, compañeros?</li>
+</ol>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="88" data-paginate="true" data-header="Comparar fuentes" data-footer="Tacticas - 3" data-theme="UNRN" lang="C" data-marpit-pagination="88" style="--paginate:true;--header:Comparar fuentes;--footer:Tacticas - 3;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Comparar fuentes</header>
+
+<h1 id="triangul%C3%A1-informaci%C3%B3n">Triangulá información</h1>
+<h2 id="no-conf%C3%ADes-en-una-sola-fuente">No confíes en una sola fuente:</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>1. IA te explica concepto
+2. Lees documentación oficial
+3. Ves video tutorial
+4. Preguntas en clase
+</code></pre>
+<p><strong>Si todas coinciden ⟾ <em>probablemente</em> correcto</strong><br />
+<strong>Si difieren ⟾ investigar más</strong></p>
+<footer>Tacticas - 3</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="89" data-paginate="true" data-header="Integridad académica" data-theme="UNRN" lang="C" data-marpit-pagination="89" style="--paginate:true;--header:Integridad académica;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Integridad académica</header>
+
+<h1 id="honestidad-y-%C3%A9tica">Honestidad y ética</h1>
+<h2 id="est%C3%A1-permitido">Está <strong>permitido</strong></h2>
+<ul>
+<li>Usar IA para aprender</li>
+<li>Pedir explicaciones</li>
+<li>Debugging con ayuda IA</li>
+</ul>
+<p><em>❲Esta presentación trata estos temas❳</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="90" data-paginate="true" data-header="Integridad académica" data-theme="UNRN" lang="C" data-marpit-pagination="90" style="--paginate:true;--header:Integridad académica;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Integridad académica</header>
+<h1 id="honestidad-y-%C3%A9tica-1">Honestidad y ética</h1>
+<h2 id="pero-no-est%C3%A1-permitido">Pero <strong>NO</strong> está permitido:</h2>
+<ul>
+<li>Copiar código completo de IA</li>
+<li>Entregar sin entender</li>
+<li>Usar IA para exámenes</li>
+</ul>
+<h2 id="si-hay-dudas-pregunt%C3%A1-al-docente">Si hay dudas, preguntá al docente</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="91" data-paginate="true" data-header="Transparencia" data-footer="Una buena alternativa en los entregables" data-theme="UNRN" lang="C" data-marpit-pagination="91" style="--paginate:true;--header:Transparencia;--footer:Una buena alternativa en los entregables;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Transparencia</header>
+
+<h1 id="transparencia">Transparencia</h1>
+<h2 id="si-usas-ia-para-algo-entregable">Si usas IA para algo entregable:</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-string">&quot;&quot;&quot;
+Módulo calculadora.
+
+Nota: Usé ChatGPT para entender cómo manejar
+excepciones en división. Adapté el código a
+mi solución.
+&quot;&quot;&quot;</span>
+</code></pre>
+<footer>Una buena alternativa en los entregables</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="92" data-paginate="true" data-header="Transparencia" data-footer="Una buena alternativa en los entregables" data-theme="UNRN" lang="C" data-marpit-pagination="92" style="--paginate:true;--header:Transparencia;--footer:Una buena alternativa en los entregables;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Transparencia</header>
+<h1 is="marp-h1" data-auto-scaling id="ser-transparente"> Ser transparente:</h1>
+<ul>
+<li>Muestra integridad</li>
+<li>Permite feedback apropiado</li>
+<li>Evita malentendidos</li>
+</ul>
+<footer>Una buena alternativa en los entregables</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="93" data-paginate="true" data-header="Red flags" data-theme="UNRN" lang="C" data-marpit-pagination="93" style="--paginate:true;--header:Red flags;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Red flags</header>
+
+<h1 id="se%C3%B1ales-de-alerta">Señales de alerta</h1>
+<h2 id="%F0%9F%9A%A8-problemas-si"><img class="emoji" draggable="false" alt="🚨" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6a8.svg" data-marp-twemoji=""/> Problemas si:</h2>
+<ul>
+<li>No puedes explicar tu código</li>
+<li>Código usa conceptos no vistos</li>
+<li>Funciona pero no sabes por qué</li>
+<li>Copias y pegas sin leer</li>
+<li>Depende de IA para todo</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="94" data-paginate="true" data-theme="UNRN" lang="C" data-marpit-pagination="94" style="--paginate:true;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h2 id="%E2%9C%85-bien-si"><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" data-marp-twemoji=""/> Bien si:</h2>
+<ul>
+<li>Entiendes cada línea</li>
+<li>Puedes modificar código</li>
+<li>Experimentaste con él</li>
+<li>IA complementa, no reemplaza</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="95" data-paginate="true" data-header="Reflexión" data-theme="UNRN" lang="C" data-marpit-pagination="95" style="--paginate:true;--header:Reflexión;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Reflexión</header>
+
+<h1 id="preg%C3%BAntate-honestamente">Pregúntate honestamente</h1>
+<h2 id="despu%C3%A9s-de-usar-ia">Después de usar IA:</h2>
+<p>_ ¿Aprendí algo nuevo?<br />
+_ ¿Puedo replicar esto solo?<br />
+_ ¿Entiendo el concepto?<br />
+_ ¿Podría explicarlo a alguien?<br />
+_ ¿Soy mejor programador?</p>
+<h1 id="si-mayor%C3%ADa-es-no">Si mayoría es NO...</h1>
+<h2 id="est%C3%A1s-usando-ia-incorrectamente">Estás usando IA incorrectamente</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="96" data-paginate="true" data-header="Responsabilidad" data-theme="UNRN" lang="C" data-marpit-pagination="96" style="--paginate:true;--header:Responsabilidad;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Responsabilidad</header>
+
+<h1 id="tu-responsabilidad">Tu responsabilidad</h1>
+<h2 id="como-estudiante">Como estudiante:</h2>
+<ul>
+<li>Aprender genuinamente</li>
+<li>Desarrollar habilidades</li>
+<li>Ser honesto</li>
+<li>Usar herramientas éticamente</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="97" data-paginate="true" data-header="Responsabilidad" data-theme="UNRN" lang="C" data-marpit-pagination="97" style="--paginate:true;--header:Responsabilidad;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Responsabilidad</header>
+
+<h1 id="tu-responsabilidad-1">Tu responsabilidad</h1>
+<h2 id="como-futuro-profesional">Como futuro profesional:</h2>
+<ul>
+<li>Código que entiendes</li>
+<li>Soluciones que puedes mantener</li>
+<li>Reputación íntegra</li>
+<li>Habilidades reales</li>
+<li>No divulgar conocimiento y código interno</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="98" data-paginate="true" data-header="Futuro profesional" data-theme="UNRN" lang="C" data-marpit-pagination="98" style="--paginate:true;--header:Futuro profesional;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<header>Futuro profesional</header>
+
+<h1 id="preparaci%C3%B3n-real">Preparación real</h1>
+<p><strong>En el trabajo:</strong></p>
+<ul>
+<li>No siempre tendrás IA</li>
+<li>Necesitas debugging mental</li>
+<li>Código complejo requiere entendimiento</li>
+<li>Entrevistas técnicas son presenciales</li>
+<li>Clientes esperan expertise real</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="99" data-paginate="true" data-theme="UNRN" lang="C" data-marpit-pagination="99" style="--paginate:true;--theme:UNRN;" data-marpit-pagination-total="101" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="aprende-de-verdad-ahora"> Aprende de verdad ahora</h1>
+<h1 is="marp-h1" data-auto-scaling id="tu-futuro-yo-te-lo-agradecer%C3%A1"> <em>Tu futuro yo te lo agradecerá</em></h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="100" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%BFpreguntas-7"> ¿Preguntas?</h1>
+<h2 id="%C2%BFqu%C3%A9-les-pareci%C3%B3"><strong>¿Qué les pareció?</strong></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="101" data-class="inverse" data-theme="UNRN" lang="C" class="inverse" style="--class:inverse;--theme:UNRN;" data-size="4:3">
+<h1 is="marp-h1" data-auto-scaling id="%C2%A1%C3%A9xitos"> ¡Éxitos!</h1>
+<p>y nos estamos viendo</p>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol(),l=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o);let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();l()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[a]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>NOTAS DEL ORADOR:
+- Objetivo: Establecer una postura proactiva pero crítica frente a la IA.
+- Gancho: &quot;Tienen en su bolsillo a un experto que sabe todo el código del mundo. ¿Cómo evitamos que ese experto nos impida aprender a nosotros?&quot;</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>NOTAS DEL ORADOR:
+- Negar la IA sería como negar la calculadora en una clase de ingeniería.
+- Es una herramienta profesional estándar hoy en día.</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>NOTAS DEL ORADOR:
+- José Escamilla es Director del Instituto para el Futuro de la Educación del Tec de Monterrey.
+- La metáfora es poderosa: si querés músculos, tenés que hacer el ejercicio vos.
+- Si querés neuronas programadoras, tenés que pensar vos.
+- La IA puede ser tu entrenador, pero no puede hacer las flexiones por vos.
+- Concepto clave: descarga cognitiva vs deuda cognitiva.</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>NOTAS DEL ORADOR:
+- LLM = Large Language Model (Modelo de Lenguaje Grande).
+- Son sistemas probabilísticos, no bases de datos de verdades.
+- Generan texto que suena bien pero puede estar completamente equivocado.
+- No tienen acceso a información en tiempo real (depende del modelo).
+- No piensan ni entienden realmente, predicen secuencias de texto.</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>NOTAS DEL ORADOR:
+- La IA es convincente incluso cuando miente.
+- Son ustedes el responsable final del código, _no la IA_.</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>NOTAS DEL ORADOR:
+- Tutor 24/7: Pueden preguntar a las 3am cuando están trabados.
+- Generador de explicaciones: Pueden pedir que explique de 5 formas distintas.
+- Verificador: &quot;¿Mi razonamiento tiene sentido?&quot;
+- Ejercicios: &quot;Dame 5 problemas más de este tipo&quot;.
+- La clave es que USTEDES siguen pensando, la IA amplifica.</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>NOTAS DEL ORADOR:
+- Analogía: La IA es como el GPS. Es genial para no perderse, pero si lo usás siempre, nunca aprendés las calles de tu ciudad.
+- Queremos programadores que sepan orientarse sin GPS cuando sea necesario.</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>NOTAS DEL ORADOR:
+- Pensamiento lógico: Descomponer problemas en pasos.
+- Resolución de problemas: Encontrar caminos cuando no hay receta.
+- Debugging mental: Simular la ejecución en tu cabeza.
+- Lectura de código: Entender código ajeno (incluso el tuyo de hace 2 semanas).
+- Diseño: Pensar ANTES de escribir código.
+- Ninguna de estas se desarrolla copiando código de la IA.</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>NOTAS DEL ORADOR:
+- No hay atajos para adquirir criterio experto.</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>NOTAS DEL ORADOR:
+- La &quot;Ilusión de competencia&quot;: Creer que sabés hacer algo porque lo copiaste y funcionó.
+- El examen será sin IA (probablemente). Ahí se cae la ilusión.</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>NOTAS DEL ORADOR:
+- Usar la IA como un &quot;Stack Overflow conversacional&quot;.
+- Pedir el &quot;por qué&quot;, no solo el &quot;qué&quot;.</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>NOTAS DEL ORADOR:
+- Si el prompt es &quot;hacé mi tarea&quot;, estás perdiendo tiempo y plata.
+- El objetivo del curso no es entregar código, es desarrollar neuronas.</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>NOTAS DEL ORADOR:
+- La práctica es donde se forman las conexiones neuronales.
+- No hay atajos para desarrollar habilidades.
+- Es como querer aprender a tocar guitarra mirando videos.
+- En algún momento tenés que agarrar la guitarra.</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>NOTAS DEL ORADOR:
+
+Piensen en el tiempo del profesor
+
+- La IA alucina. Inventa funciones que no existen.
+- Confiar ciegamente es un riesgo profesional.</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>NOTAS DEL ORADOR:
+- Punto clave: la IA no necesita aprender, USTEDES sí.
+- Si la IA hace todo, ¿quién desarrolla las habilidades?
+- El título dice que USTEDES saben programar, no la IA.
+- Están invirtiendo tiempo y dinero en SU formación.</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>NOTAS DEL ORADOR:
+- Dato importante: lo que suben a ChatGPT se usa para entrenar.
+- Cuidado con código confidencial de empresas.
+- En el trabajo esto puede ser un problema serio.
+- Mejor acostumbrarse a NO depender 100% de la IA.</p></div><div class="bespoke-marp-note" data-index="30" tabindex="0"><p>NOTAS DEL ORADOR:
+- Mínimo 15-20 minutos antes de consultar.
+- El esfuerzo inicial es donde ocurre el aprendizaje.
+- Llegá hasta donde puedas, aunque sea poco.
+- Escribí aunque sea pseudocódigo o comentarios.</p></div><div class="bespoke-marp-note" data-index="31" tabindex="0"><p>NOTAS DEL ORADOR:
+- &quot;No me funciona&quot; no es una pregunta.
+- &quot;Mi lazo no termina cuando ingreso 0&quot; SÍ es una pregunta.
+- Formular bien la pregunta ya es la mitad del camino.
+- A veces al formular la pregunta, encontrás la respuesta vos solo.</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>NOTAS DEL ORADOR:
+- La IA y el profe cumplen roles similares acá.
+- SIEMPRE pidan explicación, no solución.
+- &quot;¿Por qué pasa esto?&quot; en lugar de &quot;Corregime esto&quot;.
+- Las restricciones en el prompt son clave.</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>NOTAS DEL ORADOR:
+- NO copiar y pegar directamente.
+- Leer línea por línea.
+- Modificar cosas y ver qué pasa.
+- &quot;¿Qué pasa si cambio esto?&quot;
+- La experimentación es parte del aprendizaje.</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>NOTAS DEL ORADOR:
+- Adaptar, no copiar textual.
+- Probar con tus propios casos.
+- Asegurarte de que podés explicar cada línea.
+- Si no podés explicarlo, no lo entendés.</p></div><div class="bespoke-marp-note" data-index="35" tabindex="0"><p>NOTAS DEL ORADOR:
+- El proceso de 5 pasos funciona para cualquier aprendizaje.
+- Con un libro, con un profe, con un video, con IA.
+- La clave es: intentar primero, identificar la duda, preguntar específico.
+- La IA es solo una herramienta más, no cambia el proceso.</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>NOTAS DEL ORADOR:
+- El &quot;Struggle&quot; (esfuerzo/lucha) es necesario para el aprendizaje. Si no te cuesta un poco, no aprendés.</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>NOTAS DEL ORADOR:
+- Esta es la fórmula mágica para buenos prompts.
+- CONTEXTO: quién soy y qué sé.
+- OBJETIVO: qué quiero lograr.
+- RESTRICCIONES: qué NO quiero (clave para aprender).
+- FORMATO: cómo quiero la respuesta.</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>NOTAS DEL ORADOR:
+- El contexto es la base de un buen prompt.
+- Sin contexto, la IA no sabe si hablarle a un niño o a un experto.
+- Incluir: nivel, tema actual, conocimientos previos.
+- Ejemplo: &quot;Soy estudiante de ingreso, estoy viendo lazos&quot;.</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>NOTAS DEL ORADOR:
+- Sin contexto, la IA no sabe si hablar como a un niño o a un PhD.
+- &quot;Soy principiante en Python&quot; cambia totalmente la respuesta.
+- Mencionen qué temas YA vieron, para que no use cosas que no conocen.
+- Ejemplo: &quot;Solo vi if, while y for, no uses funciones todavía&quot;.</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>NOTAS DEL ORADOR:
+- El objetivo debe ser ESPECÍFICO.
+- &quot;Ayudame&quot; no es un objetivo.
+- &quot;Explicame por qué mi lazo no termina&quot; SÍ es un objetivo.
+- Cuanto más preciso, mejor respuesta van a obtener.</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>Notas del Orador: {manuales, solo ampliar}
+- **Explicar**: &quot;Explicame qué hace la función `range()`&quot;
+- **Comparar**: &quot;¿Cuál es la diferencia entre `while` y `for`?&quot;
+- **Diagnosticar**: &quot;¿Por qué este código produce un error de índice?&quot;
+- **Guiar**: &quot;Dame pistas para resolver este problema sin darme la solución&quot;
+- **Revisar**: &quot;¿Qué errores o mejoras ves en este código que escribí?&quot;
+- **Ejemplificar**: &quot;Dame ejemplos de uso de diccionarios en situaciones reales&quot;</p></div><div class="bespoke-marp-note" data-index="46" tabindex="0"><p>NOTAS DEL ORADOR:
+- Las restricciones son CLAVE para el aprendizaje.
+- &quot;No me des la solución&quot; es la restricción más importante.
+- También: &quot;No uses conceptos que no vi todavía&quot;.
+- Sin restricciones, la IA resuelve todo y ustedes no aprenden nada.</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>Notas del orador:
+
+Sin restricciones, la IA por defecto tiende a darte la &quot;mejor&quot; solución según sus criterios, que puede incluir técnicas avanzadas que no conocés, resolver el problema por vos, o usar bibliotecas que no necesitás. Las restricciones te devuelven el control.</p></div><div class="bespoke-marp-note" data-index="48" tabindex="0"><p>Notas del orador:
+Si no ponés restricciones, la IA va a resolver el problema por vos. Es como pedirle a alguien que te &quot;ayude&quot; con un rompecabezas y que termine armándolo entero mientras vos mirás.</p></div><div class="bespoke-marp-note" data-index="49" tabindex="0"><p>NOTAS DEL ORADOR:
+- El formato organiza la respuesta como ustedes la necesitan.
+- &quot;Paso a paso&quot;, &quot;con ejemplo&quot;, &quot;primero teoría después código&quot;.
+- Pueden pedir analogías, diagramas, comparaciones.
+- Un buen formato hace la respuesta más útil.</p></div><div class="bespoke-marp-note" data-index="59" tabindex="0"><p>NOTAS DEL ORADOR:
+- Es una técnica de auto-evaluación muy poderosa.
+- Si no podés explicar algo simple, no lo entendés.
+- La IA hace de &quot;estudiante molesto&quot; que pregunta todo.
+- Ideal para antes de parciales.</p></div><div class="bespoke-marp-note" data-index="60" tabindex="0"><p>NOTAS DEL ORADOR:
+- La IA no tiene vergüenza de preguntar &quot;obviedades&quot;.
+- Justamente esas preguntas obvias revelan lo que no sabés.
+- Podés practicar las veces que quieras.
+- Es como tener un compañero de estudio 24/7.</p></div><div class="bespoke-marp-note" data-index="68" tabindex="0"><p>NOTAS DEL ORADOR:
+- Conceptos como &quot;recursión&quot;, &quot;punteros&quot;, &quot;objetos&quot; son abstractos.
+- Empezar con analogías ayuda a anclar el concepto.
+- Después ir agregando detalle técnico.
+- Si podés explicarlo en los 3 niveles, realmente lo entendés.</p></div><div class="bespoke-marp-note" data-index="69" tabindex="0"><p>NOTAS DEL ORADOR:
+- El cerebro aprende conectando lo nuevo con lo conocido.
+- Una analogía crea ese &quot;gancho&quot; mental.
+- Múltiples niveles dan múltiples oportunidades de entender.
+- Si no entienden en nivel 1, quizás sí en nivel 2.</p></div><div class="bespoke-marp-note" data-index="71" tabindex="0"><p>NOTAS DEL ORADOR:
+- Nivel 1: Analogía del mundo real, sin jerga técnica.
+- La idea es que CUALQUIERA pueda entender la esencia.
+- Los espejos enfrentados son una imagen muy visual.
+- Si no pueden explicar en nivel 1, no lo entienden de verdad.</p></div><div class="bespoke-marp-note" data-index="72" tabindex="0"><p>NOTAS DEL ORADOR:
+- Nivel 2: Ya usa vocabulario técnico pero accesible.
+- &quot;Función que se llama a sí misma&quot; es la definición clásica.
+- &quot;Versión más pequeña&quot; es clave: el problema se achica.
+- Este nivel es para alguien que ya programa un poco.</p></div><div class="bespoke-marp-note" data-index="73" tabindex="0"><p>NOTAS DEL ORADOR:
+- Nivel 3: Detalles técnicos de implementación.
+- Call stack, frames, scope... vocabulario avanzado.
+- Este nivel es para entender QUÉ PASA en la máquina.
+- Útil para debugging y optimización.</p></div><div class="bespoke-marp-note" data-index="79" tabindex="0"><p>NOTAS DEL ORADOR:
+- IMPORTANTE: Primero intentar solos mínimo 15-20 minutos.
+- Los errores lógicos son los más difíciles y los más educativos.
+- &quot;El código corre pero da 7 en vez de 10&quot; - error lógico.
+- La IA puede guiar sin dar la respuesta directa.</p></div><div class="bespoke-marp-note" data-index="80" tabindex="0"><p>NOTAS DEL ORADOR:
+- Debugging es una habilidad CRÍTICA que solo se aprende practicando.
+- Si siempre piden que corrijan, nunca desarrollan el &quot;olfato&quot;.
+- El proceso de encontrar bugs es transferible a cualquier lenguaje.
+- Un programador que no sabe debuggear está en problemas serios.</p></div><div class="bespoke-marp-note" data-index="85" tabindex="0"><p>NOTAS DEL ORADOR:
+- La IA &quot;alucina&quot; con confianza total.
+- Puede inventar funciones que no existen.
+- Puede dar explicaciones que suenan bien pero son falsas.
+- Puede complicar soluciones simples innecesariamente.
+- SIEMPRE verificar con documentación oficial y pruebas.</p></div><div class="bespoke-marp-note" data-index="86" tabindex="0"><p>NOTAS DEL ORADOR:
+- La IA es un &quot;loro estocástico&quot;. Repite patrones probabilísticos, no razona.
+- Puede sonar muy convincente diciendo mentiras totales.</p></div><div class="bespoke-marp-note" data-index="87" tabindex="0"><p>NOTAS DEL ORADOR:
+- Habilidad de investigación.</p></div><div class="bespoke-marp-note" data-index="88" tabindex="0"><p>NOTAS DEL ORADOR:
+- Las reglas pueden variar según la materia y el docente.
+- En general: usar para APRENDER está bien.
+- La clave es la TRANSPARENCIA y el ENTENDIMIENTO.
+- Si pueden explicar lo que hicieron, probablemente está bien.</p></div><div class="bespoke-marp-note" data-index="89" tabindex="0"><p>NOTAS DEL ORADOR:
+- Reglas claras conservan la amistad.</p></div><div class="bespoke-marp-note" data-index="91" tabindex="0"><p>NOTAS DEL ORADOR:
+- La honestidad es valorada profesionalmente.
+- En el trabajo, mentir sobre tus capacidades es problemático.
+- Si el profe sabe que usaste IA, puede dar mejor feedback.
+- La transparencia construye confianza a largo plazo.
+- Declarar uso de IA no es vergonzoso, es profesional.</p></div><div class="bespoke-marp-note" data-index="92" tabindex="0"><p>NOTAS DEL ORADOR:
+- Si alguno de estos aplica, hay que parar y reflexionar.
+- &quot;Funciona pero no sé por qué&quot; es una bomba de tiempo.
+- En el examen no van a tener IA - ahí se nota.
+- Si dependen de IA para todo, están construyendo sobre arena.</p></div><div class="bespoke-marp-note" data-index="94" tabindex="0"><p>NOTAS DEL ORADOR:
+- Estas preguntas son para auto-evaluación honesta.
+- Si la mayoría es NO, hay que cambiar el enfoque.
+- No es que la IA sea mala, es que la están usando mal.
+- El objetivo es que USTEDES mejoren, no que entreguen más rápido.
+- Sean honestos consigo mismos, nadie más va a evaluarlos acá.</p></div><div class="bespoke-marp-note" data-index="96" tabindex="0"><p>NOTAS DEL ORADOR:
+- El código que no entienden no lo pueden mantener.
+- En 6 meses van a mirar su código y no recordar qué hace.
+- La reputación profesional se construye con trabajo real.
+- El código de empresas es CONFIDENCIAL, no va a ChatGPT.
+- Las habilidades reales son las que quedan cuando no hay internet.</p></div><div class="bespoke-marp-note" data-index="97" tabindex="0"><p>NOTAS DEL ORADOR:
+- Las entrevistas técnicas de Google, Meta, etc. son SIN IA.
+- En producción a veces no podés usar IA por confidencialidad.
+- Los clientes pagan por TU expertise, no por ChatGPT.
+- Si solo sabés copiar de IA, en el trabajo se nota rápido. (y devalua la profesión)
+- Mejor desarrollar habilidades reales ahora que es gratis equivocarse.</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),a={},i=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){a[e]=(a[e]||[]).filter(function(e){return e!==t})},c=function(e,t){return(a[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},l=function(e,t){o[e]&&(n&&c("deactivate",i(n,t)),n=o[e],c("activate",i(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;c(e>0?"next":"prev",i(n,t))&&l(r,t)},u={off:s,on:function(e,t){return(a[e]||(a[e]=[])).push(t),s.bind(null,e,t)},fire:c,slide:function(e,t){if(!arguments.length)return o.indexOf(n);c("slide",i(o[e],t))&&l(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){c("destroy",i(n,e)),a={}}};return(t||[]).forEach(function(e){e(u)}),n||l(0),u}}),t),o=e(r);const a=document.body,i=(...e)=>history.replaceState(...e),s="",c="presenter",l="next",d=["",c,l],u="bespoke-marp-",f=`data-${u}`,m=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},g=()=>a.dataset.bespokeView,p=e=>new URLSearchParams(location.search).get(e),v=(e,t={})=>{const n={location,setter:i,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",m(r,n.location))}catch(e){console.error(e)}},h=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},w=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},k=e=>{e.parent.classList.add(`${u}parent`),e.slides.forEach(e=>e.classList.add(`${u}slide`)),e.on("activate",t=>{const n=`${u}active`,r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=o;e.setAttribute(`${f}fragment`,(a?"":"in")+"active");const i=`${f}current-fragment`;t===r&&n===o?e.setAttribute(i,"current"):e.removeAttribute(i)})}),e.fragmentIndex=o;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",a)};e.on("next",({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}}),e.on("prev",({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},E=document,L=()=>!(!E.fullscreenEnabled&&!E.webkitFullscreenEnabled),S=()=>!(!E.fullscreenElement&&!E.webkitFullscreenElement),P=e=>{e.fullscreen=()=>{L()&&(async()=>{S()?(E.exitFullscreen||E.webkitExitFullscreen)?.call(E):((e=E.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!L()||(e.fullscreen(),t.preventDefault())})},_=`${u}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout(()=>{r.add(_),o()},e),r.contains(_)&&(r.remove(_),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},O=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${f}load`,e?"":"hideable")}})},A=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const c=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const l=Date.now()-o<e,d=c<=n;if(n=c,l||d)return;let u;(a.deltaX>0||a.deltaY>0)&&(u="next"),(a.deltaX<0||a.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},C=(e=`.${u}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${f}osc=${JSON.stringify(e)}]`).forEach(n)};return L()||n("fullscreen",e=>e.style.display="none"),h||n("presenter",e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."}),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n&&e.openPresenterView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),L()&&(e=>{for(const t of["","webkit"])E.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",L()&&S())))}},D=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}})};var N,B,q,K,F,j,V,U={exports:{}},X=(N||(N=1,U.exports=(B=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],q=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+K[e]+";"})},K={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},F="dangerouslySetInnerHTML",j={className:"class",htmlFor:"for"},V={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var a in t)!1!==t[a]&&null!=t[a]&&a!==F&&(r+=" "+(j[a]?j[a]:q(a))+'="'+q(t[a])+'"');r+=">"}if(-1===B.indexOf(e)){if(t[F])r+=t[F].__html;else for(;n.length;){var i=n.pop();if(i)if(i.pop)for(var s=i.length;s--;)n.push(i[s]);else r+=!0===V[i]?i:q(i)}r+=e?"</"+e+">":""}return V[r]=!0,r})),U.exports),H=e(X);const R=({children:e})=>H(null,null,...e),W=`${u}presenter-`,J={container:`${W}container`,dragbar:`${W}dragbar-container`,next:`${W}next`,nextContainer:`${W}next-container`,noteContainer:`${W}note-container`,noteWrapper:`${W}note-wrapper`,noteButtons:`${W}note-buttons`,infoContainer:`${W}info-container`,infoPage:`${W}info-page`,infoPageText:`${W}info-page-text`,infoPagePrev:`${W}info-page-prev`,infoPageNext:`${W}info-page-next`,noteButtonsBigger:`${W}note-bigger`,noteButtonsSmaller:`${W}note-smaller`,infoTime:`${W}info-time`,infoTimer:`${W}info-timer`},Y=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=J.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",H(R,null,H("div",{class:J.nextContainer},H("iframe",{class:J.next,src:"?view=next"})),H("div",{class:J.dragbar}),H("div",{class:J.noteContainer},H("div",{class:J.noteWrapper}),H("div",{class:J.noteButtons},H("button",{class:J.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),H("button",{class:J.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),H("div",{class:J.infoContainer},H("div",{class:J.infoPage},H("button",{class:J.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),H("span",{class:J.infoPageText}),H("button",{class:J.infoPageNext,tabindex:"-1",title:"Next"},"Next")),H("time",{class:J.infoTime,title:"Current time"}),H("time",{class:J.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(J.dragbar).addEventListener("mousedown",()=>{t=!0,r(J.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(J.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(J.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(J.nextContainer).addEventListener("click",()=>e.next());const n=r(J.next),o=(a=n,(e,t)=>a.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var a;n.addEventListener("load",()=>{r(J.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const i=document.querySelectorAll(".bespoke-marp-note");i.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(J.noteWrapper).appendChild(e)}),e.on("activate",()=>i.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const c=e=>{s=Math.max(-5,s+e),r(J.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},l=()=>c(1),d=()=>c(-1),u=r(J.noteButtonsBigger),f=r(J.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),l()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&l(),"-"===e.key&&d()},!0),e.on("activate",({index:t})=>{r(J.infoPageText).textContent=`${t+1} / ${e.slides.length}`});const m=r(J.infoPagePrev),g=r(J.infoPageNext);m.addEventListener("click",t=>{m.blur(),e.prev({fragment:!t.shiftKey})}),g.addEventListener("click",t=>{g.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1});let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),a=t(n/1e3/60%60),i=t(n/36e5%24);r(J.infoTime).textContent=e.toLocaleTimeString(),r(J.infoTimer).textContent=`${i}:${a}:${o}`};v(),setInterval(v,250),r(J.infoTimer).addEventListener("click",()=>{p=new Date})})(e)},z=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:G},presenterUrl:{enumerable:!0,get:Q}}),h&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function G(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,W+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function Q(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),m(e)}const Z=e=>{const t=g();return t===l&&e.appendChild(document.createElement("span")),{[s]:z,[c]:Y,[l]:D}[t]},ee=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},te=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},ne=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?te(p("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),c=o(0,r(n||0,a[s].length-1));s===e.slide()&&c===e.fragmentIndex||e.slide(s,{fragment:c})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(te(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],a=r.closest("[data-marpit-fragment]");if(t&&a){const e=t.indexOf(a);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||v({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),v({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},re=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},v({},{setter:(e,...t)=>i({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},a=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),a(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&a(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const i=()=>{const{reference:e}=o();void 0===e||e<=1?w(n):a(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),i()}),e.on("destroy",i)}},{PI:oe,abs:ae,sqrt:ie,atan2:se}=Math,ce={passive:!0},le=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?a(e[0]):void 0},ce),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=ie(ae(n)**2+ae(o)**2),r.radian=se(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+oe)%(2*oe)-oe;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},ce)},de=new Map;de.clear(),de.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const ue={both:"",outgoing:"outgoing-",incoming:"incoming-"},fe={forward:"",backward:"-backward"},me=e=>`--marp-bespoke-transition-animation-${e}`,ge=e=>`--marp-transition-${e}`,pe=me("name"),ve=me("duration"),he=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const a=getComputedStyle(r).getPropertyValue(ge("duration"));a&&Number.parseFloat(a)>=0&&(n.defaultDuration=a),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),ye=async e=>de.has(e)?de.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(ue))for(const[a,i]of Object.entries(fe)){const s=`marp-${o}transition${i}-${e}`;n.push(he(s).then(e=>{t[a]=t[a]||{},t[a][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(de.set(e,t),t)),be=e=>Object.values(e).flatMap(Object.values).every(e=>!e),we=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[pe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[me("direction")]="reverse"),e}})();return!o&&n?we(e,{type:t,backward:!1}):o||{[pe]:"__bespoke_marp_transition_no_animation__"}},xe=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},ke="_tSId",$e="_tA",Ee="bespoke-marp-transition-warming-up",Le=window.matchMedia("(prefers-reduced-motion: reduce)"),Se="__bespoke_marp_transition_reduced_outgoing__",Pe="__bespoke_marp_transition_reduced_incoming__",_e={forward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}},backward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}}},Te=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ge("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>ye(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=xe(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>a=>{const i=t();if(i)return!!a[$e]||!("object"!=typeof i||(i.skipTransition(),!a.forSync));if(!o(a))return!0;const s=e.slides[e.slide()],c=()=>a.back??r,l="data-transition"+(c()?"-back":""),d=s.querySelector(`section[${l}]`);if(!d)return!0;const u=xe(d.getAttribute(l)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await ye(e);if(be(n)){if(!t)return;return n=await ye(`__builtin__${e}`),be(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(a)}finally{t(!1)}return}let r=e;Le.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=_e);const o=document.getElementById(ke);o&&o.remove();const i=document.createElement("style");i.id=ke,document.head.appendChild(i),((e,t)=>{const n=[`:root{${ge("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${ve}:${o};}`);const a=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${a(we(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${a(we(e,{...t,type:"incoming"}))}}`),n})(r,{backward:c(),duration:u.duration}).forEach(e=>i.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ee);let l=!1;const d=()=>{l||(n(a),l=!0,s.remove(Ee))},f=()=>{t(!1),i.remove(),s.remove(Ee)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[$e]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[$e]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[$e]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Ie;const Me=()=>(void 0===Ie&&(Ie="wakeLock"in navigator&&navigator.wakeLock),Ie),Oe=async()=>{const e=Me();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ae=async()=>{if(!Me())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await Oe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=p("view");a.dataset.bespokeView=e===l||e===c?e:""})();const t=(e=>{const t=p(e);return v({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=d.findIndex(e=>g()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,0],re({key:t})],[[1,1,1],Z(e)],[[1,1,0],M],[[1,1,1],k],[[1,0,0],T()],[[1,1,1],O],[[1,1,1],ne({history:!1})],[[1,1,0],A()],[[1,1,0],P],[[1,0,0],ee],[[1,1,0],le()],[[1,0,0],C()],[[1,0,0],Te],[[1,1,1],$],[[1,1,0],Ae]))})()}();</script></body></html>
