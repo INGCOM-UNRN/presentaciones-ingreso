@@ -1,0 +1,265 @@
+/* @theme UNRN */
+/* Author: martinvilu https://github.com/martinvilu/ */
+/* UNRN_3: Fusión de estructura (UNRN_2) + apariencia (UNRN_1) */
+
+
+/*
+ * lead para portada secciones
+ * inverse que solo invierte colores
+ * code para diapositivas de mucho código
+ * compact
+ */
+
+
+@import "gaia";
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --color-background: #fff;
+  --color-foreground: #1b2437;
+  --color-highlight: #eb2141;
+  --font-size-base: 30px;
+}
+
+section {
+  background-image: none;
+  font-family: "Chivo", sans-serif;
+  font-size: var(--font-size-base);
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header/Footer - estructura de UNRN_2, colores de UNRN_1 */
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #eb2141;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #1b2437;
+  color: white;
+  font-size: 0.6em;
+}
+
+/* Paginación - estilo de UNRN_1 con posicionamiento de UNRN_2 */
+section::after {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  font-size: 0.5em;
+  font-weight: 600;
+  color: #ffffff;
+  content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
+}
+
+/* Títulos - rotación de UNRN_1, estructura de UNRN_2 */
+h1 {
+  transform: rotate(-2deg);
+  color: #eb2141;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+h2, h3 {
+  color: #1b2437;
+}
+
+/* Listas */
+ul {
+  text-align: left;
+  width: 85%;
+}
+
+ul ul {
+  font-size: 0.9em;
+}
+
+/* CLASE: Centered */
+section.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CLASE: Inverse - colores de UNRN_1 */
+section.inverse {
+  background-color: #eb2141;
+  color: #ffffff;
+}
+
+section.inverse h1, section.inverse h2 {
+  color: #fff;
+}
+
+section.inverse header {
+  background-color: #fff;
+  color: #eb2141;
+}
+
+section.inverse footer {
+  background-color: #fff;
+  color: #1b2437;
+}
+
+/* CLASE: Lead (Portada) - tipografía de UNRN_1, estructura de UNRN_2 */
+section.lead {
+  align-items: flex-start;
+  text-align: left;
+}
+
+section.lead h1 {
+  font-size: 3em;
+  color: #eb2141;
+  text-align: left;
+  transform: rotate(-2deg);
+  margin-bottom: 0.2em;
+}
+
+section.lead h1 strong {
+  -webkit-text-stroke: 1px #eb2141;
+}
+
+section.lead h2 {
+  color: #eb2141;
+  text-align: left;
+}
+
+section.lead h2 strong {
+  -webkit-text-stroke: 1px #eb2141;
+}
+
+section.lead h3 {
+  color: #eb2141;
+  text-align: left;
+}
+
+section.lead h3 strong {
+  -webkit-text-stroke: 1px #eb2141;
+}
+
+section.lead h4 {
+  color: #eb2141;
+  text-align: left;
+}
+
+section.lead h4 strong {
+  -webkit-text-stroke: 1px #eb2141;
+}
+
+section.lead h5 {
+  color: #eb2141;
+  text-align: left;
+}
+
+section.lead h5 strong {
+  -webkit-text-stroke: 1px #eb2141;
+}
+
+section.lead p {
+  align-self: flex-end;
+  text-align: right;
+  font-size: 0.8em;
+}
+
+/* CLASE: Code - colores de UNRN_1, estructura de UNRN_2 */
+section.code {
+  background-color: #1b2437;
+  color: #fff;
+  justify-content: flex-start;
+  padding-top: 60px;
+}
+
+section.code header {
+  background-color: #1b2437;
+  color: #eb2141;
+}
+
+section.code footer {
+  background-color: #1b2437;
+  color: #fff;
+}
+
+section.code h1, section.code h2, section.code h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+section.code pre {
+  background-color: #232a35;
+  border: 2px solid #eb2141;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  width: 90%;
+  overflow: hidden;
+}
+
+section.code code {
+  background-color: transparent;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 30px;
+  line-height: 1.4;
+  color: #f8f8f2;
+}
+
+/* CLASE: Compact (de UNRN_2) */
+section.compact {
+  font-size: 0.8em;
+  padding: 30px;
+  justify-content: flex-start;
+}
+
+section.compact h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Blockquotes - estilo de UNRN_1 con mejoras de UNRN_2 */
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #eb2141;
+  border-top: 0.1em dashed #ff0000;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  font-style: italic;
+  max-width: 90%;
+}
+
+blockquote::before {
+  content: "";
+}
+
+blockquote::after {
+  content: "";
+}
+
+/* Imágenes centradas */
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Código inline */
+code {
+  font-family: "JetBrains Mono", monospace;
+  background-color: #707070;
+}

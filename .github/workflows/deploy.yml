@@ -1,0 +1,122 @@
+name: Deploy Marp Presentations to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build
+        run: |
+          mkdir -p build
+          
+          # Recolectar todos los archivos CSS que puedan ser temas
+          # Excluimos build y node_modules
+          CSS_FILES=$(find . -name "*.css" -not -path "./build/*")
+          THEME_ARGS=""
+          for css in $CSS_FILES; do
+            THEME_ARGS="$THEME_ARGS --theme-set $css"
+          done
+          
+          echo "Temas encontrados: $CSS_FILES"
+          
+          # Encontrar todos los archivos Markdown con marp: true
+          FILES=$(grep -l "marp: true" $(find . -name "*.md" -not -path "./build/*"))
+          
+          echo "Archivos a convertir:"
+          echo "$FILES"
+          
+          for f in $FILES; do
+            echo "Procesando $f..."
+            REL_PATH="${f#./}"
+            DIR_NAME=$(dirname "$REL_PATH")
+            BASE_NAME=$(basename "$REL_PATH" .md)
+            
+            mkdir -p "build/$DIR_NAME"
+            
+            # Convertir con Marp CLI usando todos los temas registrados
+            npx @marp-team/marp-cli "$f" $THEME_ARGS --html -o "build/$DIR_NAME/$BASE_NAME.html"
+          done
+          
+          # Generar el índice
+          echo "Generando contenido del índice..."
+          cp README.md build/index_content.md
+          echo -e "\n## Índice de Presentaciones\n" >> build/index_content.md
+          
+          if [ -n "$FILES" ]; then
+            rm -f links.tmp
+            for f in $FILES; do
+              REL_PATH="${f#./}"
+              DIR_NAME=$(dirname "$REL_PATH")
+              BASE_NAME=$(basename "$REL_PATH" .md)
+              HTML_PATH="$DIR_NAME/$BASE_NAME.html"
+              HTML_PATH="${HTML_PATH#./}"
+              
+              # Extraer título (primer H1)
+              TITLE=$(grep "^# " "$f" | head -n 1 | sed 's/# //')
+              if [ -z "$TITLE" ]; then TITLE="$BASE_NAME"; fi
+              
+              echo "$DIR_NAME|$TITLE|$HTML_PATH" >> links.tmp
+            done
+            
+            # Organizar links por directorio
+            LAST_DIR=""
+            sort links.tmp | while IFS='|' read -r dir title path; do
+              if [ "$LAST_DIR" != "$dir" ]; then
+                # Añadir un salto de diapositiva para cada nuevo directorio si no es el primero
+                if [ -n "$LAST_DIR" ]; then
+                   echo -e "\n---\n" >> build/index_content.md
+                fi
+                DISPLAY_DIR=$dir
+                if [ "$dir" == "." ]; then DISPLAY_DIR="Raíz"; fi
+                echo -e "### $DISPLAY_DIR\n" >> build/index_content.md
+                LAST_DIR="$dir"
+              fi
+              echo "* [$title]($path)" >> build/index_content.md
+            done
+            rm -f links.tmp
+          fi
+          
+          # Convertir index_content.md a index.html
+          # Forzamos tema UNRN para el índice
+          {
+            echo "---"
+            echo "marp: true"
+            echo "theme: UNRN"
+            echo "paginate: true"
+            echo "---"
+            cat build/index_content.md
+          } > build/index.md
+          
+          npx @marp-team/marp-cli build/index.md $THEME_ARGS --html -o build/index.html
+          
+          # Copiar assets estáticos (CSS y otros si los hubiera)
+          # Esto asegura que si alguien descarga el HTML y el CSS, funcione localmente
+          for css in $CSS_FILES; do
+            REL_CSS="${css#./}"
+            mkdir -p "build/$(dirname "$REL_CSS")"
+            cp "$css" "build/$REL_CSS"
+          done
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          branch: gh-pages
