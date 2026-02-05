@@ -1,6 +1,25 @@
-# presentaciones-ingreso
+# Ingeniería en Computación - Curso de Ingreso
+
+Este es el índice de presentaciones utilizadas en el Curso de Ingreso para Ingeniería en Computación de la Sede Andina, Universidad Nacional de Río Negro.
+
+- [Sobre la carrera](https://ingcom-unrn.github.io/)
+- [Apunte](https://ingcom-unrn.github.io/apunte-ingreso/)
+- [Presentaciones](https://ingcom-unrn.github.io/presentaciones-ingreso/)
+
+
 ## Índice de Presentaciones
 
+
+### IA_tecnicas
+
+* [<!-- fit --> Comprensión de Conceptos](IA_tecnicas/05_comprension_conceptos.html)
+* [<!-- fit --> Debugging Guiado](IA_tecnicas/03_debugging_guiado.html)
+* [<!-- fit --> Explicación por Capas](IA_tecnicas/02_explicacion_capas.html)
+* [<!-- fit --> Generación de Ejercicios](IA_tecnicas/07_generacion_ejercicios.html)
+* [<!-- fit --> Método de Feynman Inverso](IA_tecnicas/08_feynman_inverso.html)
+* [<!-- fit --> Prompting Socrático](IA_tecnicas/01_prompting_socratico.html)
+* [<!-- fit --> Revisión Paso a Paso](IA_tecnicas/04_revision_paso_a_paso.html)
+* [<!-- fit --> Revisión de Código](IA_tecnicas/06_revision_codigo.html)
 
 ### algoritmos
 
