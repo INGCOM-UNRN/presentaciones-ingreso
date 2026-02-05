@@ -1,6 +1,7 @@
 # presentaciones-ingreso
 ## Índice de Presentaciones
 
+
 ### algoritmos
 
 * [<!-- fit --> Diagramas de Flujo](algoritmos/0.3_diagramas_flujo.html)
@@ -13,8 +14,6 @@
 * [<!-- fit --> Pruebas de Escritorio](algoritmos/0.5_pruebas_escritorio.html)
 * [<!-- fit --> Pseudocódigo](algoritmos/0.4_pseudocodigo.html)
 * [<!-- fit --> ¿Qué es un Algoritmo?](algoritmos/0.1_que_es_algoritmo.html)
-
----
 
 ### extras
 
@@ -36,14 +35,10 @@
 * [<!-- fit --> random](extras/C.2_random.html)
 * [<!-- fit --> try-except](extras/B.2_try_except.html)
 
----
-
 ### ia
 
 * [<!-- fit --> Aprender con inteligencia artificial](ia/ia_uso.html)
 * [<!-- fit --> Ejercicios con IA](ia/ia_ejercicios.html)
-
----
 
 ### python
 
