@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Setup Pandoc
+        uses: eggboy/setup-pandoc@v1
+
       - name: Build
         run: |
           mkdir -p build
