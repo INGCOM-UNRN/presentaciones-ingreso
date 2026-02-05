@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
 
       - name: Setup Pandoc
-        uses: eggboy/setup-pandoc@v1
+        uses: r-lib/setup-pandoc@v2
 
       - name: Build
         run: |
